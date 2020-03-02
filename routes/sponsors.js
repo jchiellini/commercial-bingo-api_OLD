@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.send(JSON.stringify([
     {
       "id": 1,
-      "sponsor": "Bud Light",
+      "name": "Bud Light",
       "icon": ""
     }
   ]));
