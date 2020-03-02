@@ -1,0 +1,18 @@
+trigger:
+  - master
+
+pool:
+  vmImage: "Ubuntu-16.04"
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "12.x"
+    displayName: "Install Node.js"
+
+  - script: npm ci
+    displayName: "npm ci"
+
+  - script: npm start
+    displayName: "npm start"
+    env:
+      CI: true
