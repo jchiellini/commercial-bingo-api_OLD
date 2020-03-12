@@ -1,18 +1,30 @@
-trigger:
-  - master
-
 pool:
-  vmImage: "Ubuntu-16.04"
+  name: Hosted VS2017
 steps:
-  - task: NodeTool@0
-    inputs:
-      versionSpec: "12.x"
-    displayName: "Install Node.js"
+- task: NodeTool@0
+  displayName: 'Use Node version'
+  inputs:
+    versionSpec: 12.x
 
-  - script: npm ci
-    displayName: "npm ci"
+- task: Npm@0
+  displayName: 'npm install'
+  inputs:
+    arguments: '--force'
 
-  - script: npm start
-    displayName: "npm start"
-    env:
-      CI: true
+- task: ArchiveFiles@1
+  displayName: 'Archive files '
+  inputs:
+    rootFolder: '$(System.DefaultWorkingDirectory)'
+    includeRootFolder: false
+
+- task: CopyFiles@2
+  displayName: 'Copy File to: $(TargetFolder)'
+  inputs:
+    SourceFolder: '$(Build.ArtifactStagingDirectory)'
+    Contents: '$(Build.BuildId).zip'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)\ArtifactsToBePublished'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)\ArtifactsToBePublished'
