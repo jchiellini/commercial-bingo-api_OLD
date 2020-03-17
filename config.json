@@ -1,0 +1,9 @@
+{
+  "STORAGE_NAME": "imgstorcommercialbingo",
+  "STORAGE_KEY": "6llseJVOXIuM4+F0LGvABN0O4HzshyJZ7OsSmvnIubjHpb0yDQmuxsAmNgCbw79uBSYYLDHqS9hYNrMlhlaJHA==",
+  "CONNECTION_STRING": "DefaultEndpointsProtocol=https;AccountName=imgstorcommercialbingo;AccountKey=6llseJVOXIuM4+F0LGvABN0O4HzshyJZ7OsSmvnIubjHpb0yDQmuxsAmNgCbw79uBSYYLDHqS9hYNrMlhlaJHA==;EndpointSuffix=core.windows.net",
+  "STORAGE_KEY2": "i7aRBO0AvY8AkOLGJv7eI05lWOjXh0nFM/TPBR7Zlmqrh61LVpxvh9u4+tlzr2iIgQS4NxqmRtUZ8HikP2b4rQ==",
+  "PARTITION_KEY": "sponsorId",
+  "TABLE_NAME": "sponsors",
+  "BLOB_NAME": "sponsors"
+}
