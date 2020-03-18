@@ -1,7 +1,6 @@
 var azure = require('azure-storage');
 var async = require('async');
 var _ = require('lodash');
-var formidable = require('formidable');
 
 function SponsorListController(sponsor) {
     this.sponsor = sponsor;
@@ -27,22 +26,13 @@ SponsorListController.prototype = {
 
     addSponsor: function(req,res) {
         var self = this;
-        new formidable.IncomingForm().parse(req, (err, fields, files) => {
-            if (err) {
-                console.error('Error', err)
-                throw err
+        var item = req.body;
+
+        self.sponsor.addItem(item, function itemAdded(error, entity) {
+            if(error) {
+                throw error;
             }
-            // console.log('Fields', fields)
-            // console.log('Files', files)
-            _.forEach(files, function (file) {
-                console.log(file);
-                self.sponsor.addItem(file, fields, function itemAdded(error, entity) {
-                    if(error) {
-                        throw error;
-                    }
-                    res.send(JSON.stringify(entity));
-                });
-            });
+            res.send(JSON.stringify(entity));
         });
     },
 
