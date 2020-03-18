@@ -13,15 +13,15 @@ var nconf = require('nconf');
 nconf.env()
     .file({ file: 'config.json', search: true });
 
-function AzureBlobAdapter(blobStorageClient, accountName, blobName) {
-    this.blobStorageClient = blobStorageClient;
+function AzureTableAdapter(storageClient, tableName, partitionKey, accountName, accountKey, blobName) {
+    this.storageClient = storageClient;
     this.accountName = accountName;
-    this.blobName = blobName;
+    this.accountKey = accountKey;
+    this.tableName = tableName;
+    this.partitionKey = partitionKey;
 
-    this.blobStorageClient.createContainerIfNotExists(accountName, {
-        publicAccessLevel: 'blob'
-    }, function(error, result, response) {
-        if (error) {
+    this.storageClient.createTableIfNotExists(tableName, function tableCreated(error) {
+        if(error) {
             throw error;
         }
     });

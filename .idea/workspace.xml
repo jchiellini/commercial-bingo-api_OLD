@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ceca7e70-a271-43c3-8c25-fbad5d0fc890" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/sponsor-list.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/sponsor.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/azure-blob-adapter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/azure-table-adapter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/sponsors.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/sponsors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/sponsor.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/sponsor.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/azure-blob-adapter.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/azure-blob-adapter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +51,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/util" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="$USER_HOME$/.nvm/versions/node/v10.6.0/bin/node" />
     <property name="node.js.path.for.package.standard" value="$USER_HOME$/.nvm/versions/node/v10.6.0/bin/node" />
@@ -68,6 +64,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/util" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -88,7 +85,7 @@
       <updated>1582984956438</updated>
       <workItem from="1582984957616" duration="3190000" />
       <workItem from="1583165081801" duration="265000" />
-      <workItem from="1584291744145" duration="29719000" />
+      <workItem from="1584291744145" duration="31752000" />
     </task>
     <servers />
   </component>

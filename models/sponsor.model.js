@@ -1,5 +1,5 @@
 var azure = require('azure-storage');
-const { BlobServiceClient } = require('@azure/storage-blob');
+// const { BlobServiceClient } = require('@azure/storage-blob');
 var uuid = require('node-uuid');
 var async = require('async');
 
